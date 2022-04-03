@@ -1,0 +1,38 @@
+.navbar{
+    color: white;
+    font-size: 15px;
+
+    .container{
+        padding: 0px 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 70px;
+
+        .leftSideContainer{
+            display: flex;
+            align-items: center;
+            
+            img{
+                height: 50px;
+                cursor: pointer;
+                margin-right: 40px;
+            }
+
+            span{
+                margin-right: 40px;
+                cursor: pointer;
+            }
+        }
+
+        .rightSideContainer{
+            display: flex;
+            align-items: center;
+            
+            .rightSideIcons{
+                cursor: pointer;
+                margin: 0px 15px
+            }
+        }
+    }
+}
