@@ -1,12 +1,23 @@
+import { useState } from 'react'; 
 import SearchIcon from '@mui/icons-material/Search';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 import './Navbar.scss';
 
 function Navbar(){
+    // using this use state so when the user scroll to the top the navbar will semi transparent
+    // but when they scroll down it's gonna be black just like the real netflix 
+    const [isScrolled, setIsScrolled] = useState(false);
+    // using window.onScroll so whenever the user scroll this will pick it up 
+    window.onscroll = () => {
+        setIsScrolled(window.pageYOffset === 0 ? false : true);
+        return () => {window.onscroll = null};
+    }
+
     return(
-        <div className='navbar'>
+        <div className={isScrolled ? "navbar scrolled" : "navbar"}>
             <div className='container'>
                 {/* dividing the navbar into left and right parts */}
                 <div className='leftSideContainer'>
@@ -31,6 +42,15 @@ function Navbar(){
                     <NotificationsActiveIcon className='rightSideIcons'/>
                     <span>    </span>
                     <AccountCircleIcon className='rightSideIcons' />
+
+                    {/* profile settings and logout buttons */}
+                    <div className='profile'>
+                        <ArrowDropDownIcon className=' ArrowDropDownIcon'/>
+                        <div className='options'>
+                            <span>Settins</span>
+                            <span>Logout</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

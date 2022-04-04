@@ -7,7 +7,7 @@ function Home(){
             {/* navbar */}
             <Navbar />
             {/* featured movie */}
-            {/* list of movies */}
+            {/* list of movies */}            
         </div>
     );
 }
