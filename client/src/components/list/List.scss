@@ -1,0 +1,52 @@
+.list{
+    width: 100%;
+    margin-top: 10px;
+
+    .listTitle{
+        color: white;
+        font-size: 20px;
+        font-weight: 500;
+        margin-left: 50px;
+    }
+
+    .wrapper{
+        // if a child position is absolute then
+        // its parent's position should be relative
+        position: relative;
+        
+        .sliderArrow{
+            width: 50px;
+            height: 100%;
+            background-color: rgb(25, 25, 25, 0.5);
+            color: white;
+            // if a child position is absolute then
+            // its parent's position should be relative
+            position: absolute;
+            cursor: pointer;
+            z-index: 99; // to bring it forward
+            // to center the right arrows 
+            // as I'm using position absolute then
+            // I can use top 0, bottom 0 and margin auto
+            top: 0;
+            bottom: 0;
+            margin: auto;
+
+            &.left{
+                left: 0;
+            }
+
+            &.right{
+                right: 0;
+            }
+        }
+
+        .container{
+            margin-left: 50px;
+            margin-top: 15px;
+            display: flex;
+            width: max-content;
+            transform: translateX(0px); // initially
+            transition: all 1s ease; // to add animation to the slider movement
+        }
+    }
+}

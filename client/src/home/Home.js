@@ -1,6 +1,7 @@
 import './Home.scss';
 import Navbar from '../components/navbar/Navbar.js';
 import Featured from '../components/featured/Featured.js';
+import List from '../components/list/List.js'
 
 function Home(){
     return (
@@ -9,7 +10,11 @@ function Home(){
             <Navbar />
             {/* featured movie */}
             <Featured type="movie"/>
-            {/* list of movies */}            
+            {/* list of movies */}          
+            <List />  
+            <List />  
+            <List />  
+            <List />  
         </div>
     );
 }
