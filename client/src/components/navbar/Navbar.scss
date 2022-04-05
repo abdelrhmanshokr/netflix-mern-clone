@@ -3,7 +3,7 @@
     color: white;
     font-size: 15px;
     // to make this navbar always on top even when you score down
-    position: sticky;
+    position: static;
     top: 0px;
     left: 0px;
     // to add gradient of color in the navbar (will be noticed later after adding the movies 
