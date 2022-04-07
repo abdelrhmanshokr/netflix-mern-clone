@@ -1,10 +1,11 @@
-import Home from './home/Home.js';
+import Home from './pages/home/Home';
+import Watch from './pages/watch/Watch';
 import './app.scss';
 
 function App() {
   return (
     <div>
-      <Home />
+      <Watch />
     </div>
   );
 }
