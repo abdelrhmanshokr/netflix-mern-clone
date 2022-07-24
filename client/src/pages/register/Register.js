@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import './Register.scss';
+import "./Register.scss";
 
 function Register(){
     const [email, setEmail] = useState("");
@@ -15,53 +15,53 @@ function Register(){
     };
 
     return (
-        <div className='register'>
-            <div className='top'>
-                <div className='wrapper'>
+        <div className="register">
+            <div className="top">
+                <div className="wrapper">
                     <img 
-                        src='https://pngimg.com/uploads/netflix/netflix_PNG6.png'
-                        alt='Netflix logo'
-                        className='logo'
+                        src="https://pngimg.com/uploads/netflix/netflix_PNG6.png"
+                        alt="Netflix logo"
+                        className="logo"
                     />
-                    <button className='loginButton'>Log In</button>
+                    <button className="loginButton">Log In</button>
                 </div>
             </div>
 
-            <div className='container'>
+            <div className="container">
                 <h1>nothing important</h1>
                 <h3>the same here</h3>
                 <p>just wasting space here</p>
                 {
                     email === "" 
                         ?
-                        <div className='input'>
+                        <div className="input">
                             <input 
-                                id='emailInput' 
-                                className='emailInput' 
-                                type='email' 
-                                placeholder='Enter your email' 
+                                id="emailInput" 
+                                className="emailInput" 
+                                type="email" 
+                                placeholder="Enter your email" 
                                 required
                                 ref={emailRef}
                             />
                             <button 
-                                className='registerButton'
+                                className="registerButton"
                                 onClick={registerClickHandler}
                             >
                                 Register
                             </button>
                         </div>
                         :
-                        <form className='form'>
+                        <form className="form">
                             <input 
-                                id='passwordInput' 
-                                className='passwordInput' 
-                                type='password' 
-                                placeholder='Enter your password' 
+                                id="passwordInput" 
+                                className="passwordInput" 
+                                type="password" 
+                                placeholder="Enter your password" 
                                 ref={passwordRef}
                                 required
                             />
                             <button 
-                                className='sendingButton'
+                                className="sendingButton"
                                 onClick={finishHandler}
                             >
                                 Get started
