@@ -21,11 +21,10 @@ mongoose
         console.log(error);
     });
 
-    // json files
-    app.use(express.json());
-
-    // routes
-    app.use("/api/auth", authRouter);
+// json files
+app.use(express.json());
+// routes
+app.use("/api/auth", authRouter);
 
 app.listen(process.env.PORT || 3001, () => {
     console.log(`Running on ${process.env.PORT}`);
